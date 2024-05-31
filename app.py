@@ -47,9 +47,9 @@ def display_dataframes2(user_id):
 tab1, tab2 = st.tabs(["Tab1", "Tab2"])
 
 with tab1:
-    user_id1 = st.selectbox('Select User ID:', options=all_user_ids)
+    user_id1 = st.selectbox('Select User ID:', options=all_user_ids, label='s1')
     display_dataframes(user_id1)
 with tab2:
-    user_id2 = st.selectbox('Select User ID:', options=all_user_ids)
+    user_id2 = st.selectbox('Select User ID:', options=all_user_ids, label='s2')
     display_dataframes2(user_id2)
 # streamlit run app.py
