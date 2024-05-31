@@ -10,8 +10,7 @@ df_2 = pd.read_pickle('results_v2.pkl')
 df_2_1 = df[df['categoria'] == 'te recomendamos']
 df_2_2 = df[df['categoria'] == 'tus favoritos']
 
-st.title('Sistema de Recomendación - Corteza -')
-user_id = st.selectbox('Select User ID:', options=all_user_ids)
+st.title('Sistema de Recomendación -Corteza-')
 
 def display_dataframes(user_id):
     st.markdown('## Recomendaciones sin favoritos')
@@ -48,7 +47,9 @@ def display_dataframes2(user_id):
 tab1, tab2 = st.tabs(["Tab1", "Tab2"])
 
 with tab1:
-    display_dataframes(user_id)
+    user_id1 = st.selectbox('Select User ID:', options=all_user_ids)
+    display_dataframes(user_id1)
 with tab2:
-    display_dataframes2(user_id)
+    user_id2 = st.selectbox('Select User ID:', options=all_user_ids)
+    display_dataframes2(user_id2)
 # streamlit run app.py
